@@ -11,18 +11,28 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@class TabBar, TabBarItem;
+@protocol TabBarDelegate <NSObject>
 
-@protocol TabBarDelegate<NSObject>
 @optional
-- (void)tabBar:(TabBar *)tabBar didSelectItem:(TabBarItem *)item;
+- (void)didSelectIndex:(NSInteger)index;
+
 @end
 
 @interface TabBar : UIView
 
-@property (strong, nonatomic) UIView *contentsView;
+@property (nonatomic, weak) IBOutlet UIView *contentsView;
 
-- (void)addItems:(NSArray <TabBarItem *>*)items;
+@property (nonatomic, weak) id<TabBarDelegate> delegate;
+@property (nonatomic, weak) id target;
+
+@property (nonatomic) NSInteger selectedSegmentIndex;
+@property (nonatomic, readonly) NSInteger segmentsCount;
+
+// Item @[
+//    "title":String
+//    "viewController":String<UIViewControllerName>
+// ]
+- (void)initWithItems:(nonnull NSArray <NSDictionary <NSString *, NSString *>*>*)items;
 
 @end
 

@@ -10,11 +10,30 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@protocol TabBarItemDelegate <NSObject>
 
+@optional
+- (void)segmentItemViewControllerMoveTo:(UIViewController *)viewController;
 
-@interface TabBarItem : NSObject
+@end
 
-- (instancetype)initWithTitle:(NSString *)title viewController:(NSString *)viewController;
+#pragma mark - SegmentItemViewController
+@interface SegmentItemViewController : UIViewController
+
+@property (nonatomic, weak) id<TabBarItemDelegate> delegate;
+
+@end
+
+#pragma mark - TabBarItem
+@interface TabBarItem : UIControl
+
+@property (nonatomic, strong) NSString *storyboardName;
+@property (nonatomic, strong) NSString *viewControllerName;
+
+@property (nonatomic, weak, readonly) UIView *view;
+@property (nonatomic) NSInteger index;
+
+- (instancetype)initWithTitle:(NSString *)title;
 
 @end
 
