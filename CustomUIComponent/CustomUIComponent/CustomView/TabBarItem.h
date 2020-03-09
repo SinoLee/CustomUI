@@ -6,14 +6,14 @@
 //  Copyright © 2020 SinoLab. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
 @protocol TabBarItemDelegate <NSObject>
 
 @optional
-- (void)segmentItemViewControllerMoveTo:(UIViewController *)viewController;
+//- (void)segmentItemViewControllerMoveTo:(UIViewController *)viewController;
 
 @end
 
@@ -34,6 +34,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) NSInteger index;
 
 - (instancetype)initWithTitle:(NSString *)title;
+//initWithTitle:@"Mode" viewController:@"ModeViewController"
+- (instancetype)initWithTitle:(NSString *)title viewController:(NSString *)viewControllerName;
 
 @end
 

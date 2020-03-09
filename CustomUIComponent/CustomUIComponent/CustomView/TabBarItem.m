@@ -7,7 +7,6 @@
 //
 
 #import "TabBarItem.h"
-#import <UIKit/UIKit.h>
 
 #pragma mark - SegmentItemViewController
 @implementation SegmentItemViewController
@@ -31,67 +30,101 @@
     self = [super init];
     if (self) {
         // Init Label
-        _titleLabel = [[UILabel alloc] initWithFrame:CGRectZero];
-        [_titleLabel setFont:[UIFont systemFontOfSize:20]];
-        [_titleLabel setText:title];
-        [_titleLabel setTextColor:[UIColor grayColor]];
-        [self addSubview:_titleLabel];
-        _titleLabel.translatesAutoresizingMaskIntoConstraints = NO;
-        [NSLayoutConstraint activateConstraints:@[
-            [NSLayoutConstraint constraintWithItem:_titleLabel
-                                         attribute:NSLayoutAttributeCenterX
-                                         relatedBy:NSLayoutRelationEqual
-                                            toItem:self
-                                         attribute:NSLayoutAttributeCenterX
-                                        multiplier:1
-                                          constant:0],
-            [NSLayoutConstraint constraintWithItem:_titleLabel
-                                         attribute:NSLayoutAttributeBottom
-                                         relatedBy:NSLayoutRelationEqual
-                                            toItem:self
-                                         attribute:NSLayoutAttributeBottom
-                                        multiplier:1
-                                          constant:-12.0],
-        ]];
-        
-        // Init Underline
-        _underLine = [[UIView alloc] initWithFrame:CGRectZero];
-        [_underLine setBackgroundColor:[UIColor whiteColor]];
-        [self addSubview:_underLine];
-        _underLine.translatesAutoresizingMaskIntoConstraints = NO;
-        [NSLayoutConstraint activateConstraints:@[
-            [NSLayoutConstraint constraintWithItem:_underLine
-                                         attribute:NSLayoutAttributeCenterX
-                                         relatedBy:NSLayoutRelationEqual
-                                            toItem:self
-                                         attribute:NSLayoutAttributeCenterX
-                                        multiplier:1
-                                          constant:0],
-            [NSLayoutConstraint constraintWithItem:_underLine
-                                         attribute:NSLayoutAttributeBottom
-                                         relatedBy:NSLayoutRelationEqual
-                                            toItem:self
-                                         attribute:NSLayoutAttributeBottom
-                                        multiplier:1
-                                          constant:-4.0],
-            [NSLayoutConstraint constraintWithItem:_underLine
-                                         attribute:NSLayoutAttributeHeight
-                                         relatedBy:NSLayoutRelationEqual
-                                            toItem:nil
-                                         attribute:NSLayoutAttributeHeight
-                                        multiplier:1
-                                          constant:4.0],
-            [NSLayoutConstraint constraintWithItem:_underLine
-                                         attribute:NSLayoutAttributeWidth
-                                         relatedBy:NSLayoutRelationEqual
-                                            toItem:self
-                                         attribute:NSLayoutAttributeWidth
-                                        multiplier:1
-                                          constant:-16.0]
-        ]];
-        self.selected = NO;
+        [self initializeView];
+        [self setTitle:title];
     }
     return self;
+}
+
+- (instancetype)initWithTitle:(NSString *)title viewController:(NSString *)viewControllerName {
+    self = [super init];
+    if (self) {
+        [self initializeView];
+        [self setTitle:title];
+        [self setViewControllerName:viewControllerName];
+    }
+    return self;
+}
+
+#pragma mark - Initialize View
+
+- (void)initializeView {
+    [self addSubview:self.titleLabel];
+    self.titleLabel.translatesAutoresizingMaskIntoConstraints = NO;
+    [NSLayoutConstraint activateConstraints:@[
+        [NSLayoutConstraint constraintWithItem:self.titleLabel
+                                     attribute:NSLayoutAttributeCenterX
+                                     relatedBy:NSLayoutRelationEqual
+                                        toItem:self
+                                     attribute:NSLayoutAttributeCenterX
+                                    multiplier:1
+                                      constant:0],
+        [NSLayoutConstraint constraintWithItem:self.titleLabel
+                                     attribute:NSLayoutAttributeBottom
+                                     relatedBy:NSLayoutRelationEqual
+                                        toItem:self
+                                     attribute:NSLayoutAttributeBottom
+                                    multiplier:1
+                                      constant:-12.0],
+    ]];
+    
+    // Init Underline
+    [self addSubview:self.underLine];
+    self.underLine.translatesAutoresizingMaskIntoConstraints = NO;
+    [NSLayoutConstraint activateConstraints:@[
+        [NSLayoutConstraint constraintWithItem:self.underLine
+                                     attribute:NSLayoutAttributeCenterX
+                                     relatedBy:NSLayoutRelationEqual
+                                        toItem:self
+                                     attribute:NSLayoutAttributeCenterX
+                                    multiplier:1
+                                      constant:0],
+        [NSLayoutConstraint constraintWithItem:self.underLine
+                                     attribute:NSLayoutAttributeBottom
+                                     relatedBy:NSLayoutRelationEqual
+                                        toItem:self
+                                     attribute:NSLayoutAttributeBottom
+                                    multiplier:1
+                                      constant:-4.0],
+        [NSLayoutConstraint constraintWithItem:self.underLine
+                                     attribute:NSLayoutAttributeHeight
+                                     relatedBy:NSLayoutRelationEqual
+                                        toItem:nil
+                                     attribute:NSLayoutAttributeHeight
+                                    multiplier:1
+                                      constant:4.0],
+        [NSLayoutConstraint constraintWithItem:self.underLine
+                                     attribute:NSLayoutAttributeWidth
+                                     relatedBy:NSLayoutRelationEqual
+                                        toItem:self
+                                     attribute:NSLayoutAttributeWidth
+                                    multiplier:1
+                                      constant:-16.0]
+    ]];
+    self.selected = NO;
+}
+
+- (UILabel *)titleLabel {
+    if (!_titleLabel) {
+        _titleLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+        [_titleLabel setFont:[UIFont systemFontOfSize:20]];
+        [_titleLabel setTextColor:[UIColor grayColor]];
+    }
+    return _titleLabel;
+}
+
+- (UIView *)underLine {
+    if (!_underLine) {
+        _underLine = [[UIView alloc] initWithFrame:CGRectZero];
+        [_underLine setBackgroundColor:[UIColor whiteColor]];
+    }
+    return _underLine;
+}
+
+#pragma mark -
+
+- (void)setTitle:(NSString *)title {
+    [self.titleLabel setText:title];
 }
 
 - (void)setSelected:(BOOL)selected {
@@ -102,7 +135,7 @@
 
 - (UIViewController *)viewController {
     if (!_viewController && self.viewControllerName) {
-        NSString *storyboardName = self.storyboardName ?: @"ModeSetting";
+        NSString *storyboardName = self.storyboardName ?: @"Main";
         _viewController = [[UIStoryboard storyboardWithName:storyboardName bundle:nil] instantiateViewControllerWithIdentifier:self.viewControllerName];
     }
     return _viewController;

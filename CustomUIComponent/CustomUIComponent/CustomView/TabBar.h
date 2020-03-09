@@ -33,6 +33,7 @@ NS_ASSUME_NONNULL_BEGIN
 //    "viewController":String<UIViewControllerName>
 // ]
 - (void)initWithItems:(nonnull NSArray <NSDictionary <NSString *, NSString *>*>*)items;
+- (void)addItems:(NSArray <TabBarItem *>*)items;
 
 @end
 
