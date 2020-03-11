@@ -10,6 +10,15 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    var customSwitch: CustomSwitch = {
+        // https://github.com/factoryhr/CustomUISwitch
+        let customSwitch = CustomSwitch()
+        customSwitch.translatesAutoresizingMaskIntoConstraints = false
+        customSwitch.onTintColor = UIColor(red: 70/255, green: 158/255, blue: 179/255, alpha: 1.0)
+        customSwitch.offTintColor = UIColor(white: 208/255, alpha: 1.0)
+        return customSwitch
+    }()
+    
     @IBOutlet weak var titleBar: TitleBar!
     
     override func viewDidLoad() {

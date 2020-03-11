@@ -23,6 +23,8 @@
 		8423D14E2414C1FD00360C03 /* ModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8423D14A2414C1FD00360C03 /* ModeViewController.swift */; };
 		8423D14F2414C1FD00360C03 /* ModeAndAutomationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8423D14B2414C1FD00360C03 /* ModeAndAutomationViewController.m */; };
 		8423D1502414C1FD00360C03 /* AutomationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8423D14C2414C1FD00360C03 /* AutomationViewController.swift */; };
+		843F023A2418B1E20011B566 /* CustomSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843F02382418B1E20011B566 /* CustomSwitch.swift */; };
+		843F023B2418B1E20011B566 /* CustomThumbView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843F02392418B1E20011B566 /* CustomThumbView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,8 @@
 		8423D14A2414C1FD00360C03 /* ModeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModeViewController.swift; sourceTree = "<group>"; };
 		8423D14B2414C1FD00360C03 /* ModeAndAutomationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModeAndAutomationViewController.m; sourceTree = "<group>"; };
 		8423D14C2414C1FD00360C03 /* AutomationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutomationViewController.swift; sourceTree = "<group>"; };
+		843F02382418B1E20011B566 /* CustomSwitch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSwitch.swift; sourceTree = "<group>"; };
+		843F02392418B1E20011B566 /* CustomThumbView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomThumbView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +185,8 @@
 				8423D1442414C1A400360C03 /* TabBarItem.m */,
 				8423D13F2414C1A300360C03 /* TitleBar.h */,
 				8423D1402414C1A300360C03 /* TitleBar.m */,
+				843F02382418B1E20011B566 /* CustomSwitch.swift */,
+				843F02392418B1E20011B566 /* CustomThumbView.swift */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -346,11 +352,13 @@
 			files = (
 				8423D0F02412F7FD00360C03 /* AppDelegate.swift in Sources */,
 				8423D1462414C1A400360C03 /* TabBar.m in Sources */,
+				843F023A2418B1E20011B566 /* CustomSwitch.swift in Sources */,
 				8423D1502414C1FD00360C03 /* AutomationViewController.swift in Sources */,
 				8423D0FA2412F7FD00360C03 /* CustomUIComponent.xcdatamodeld in Sources */,
 				8423D1472414C1A400360C03 /* TabBarItem.m in Sources */,
 				8423D14F2414C1FD00360C03 /* ModeAndAutomationViewController.m in Sources */,
 				8423D0F22412F7FD00360C03 /* SceneDelegate.swift in Sources */,
+				843F023B2418B1E20011B566 /* CustomThumbView.swift in Sources */,
 				8423D13824136D9F00360C03 /* NSLayoutConstraint+utils.m in Sources */,
 				8423D14D2414C1FD00360C03 /* ViewController.swift in Sources */,
 				8423D14E2414C1FD00360C03 /* ModeViewController.swift in Sources */,
