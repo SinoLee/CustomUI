@@ -25,6 +25,8 @@
 		8423D1502414C1FD00360C03 /* AutomationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8423D14C2414C1FD00360C03 /* AutomationViewController.swift */; };
 		843F023A2418B1E20011B566 /* CustomSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843F02382418B1E20011B566 /* CustomSwitch.swift */; };
 		843F023B2418B1E20011B566 /* CustomThumbView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843F02392418B1E20011B566 /* CustomThumbView.swift */; };
+		8459558B2418E8AB00046E7A /* SwitchButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8459558A2418E8AB00046E7A /* SwitchButton.m */; };
+		8459558E2418E8EC00046E7A /* SwitchThumbView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8459558D2418E8EC00046E7A /* SwitchThumbView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +77,10 @@
 		8423D14C2414C1FD00360C03 /* AutomationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutomationViewController.swift; sourceTree = "<group>"; };
 		843F02382418B1E20011B566 /* CustomSwitch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSwitch.swift; sourceTree = "<group>"; };
 		843F02392418B1E20011B566 /* CustomThumbView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomThumbView.swift; sourceTree = "<group>"; };
+		845955892418E8AB00046E7A /* SwitchButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwitchButton.h; sourceTree = "<group>"; };
+		8459558A2418E8AB00046E7A /* SwitchButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwitchButton.m; sourceTree = "<group>"; };
+		8459558C2418E8EC00046E7A /* SwitchThumbView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwitchThumbView.h; sourceTree = "<group>"; };
+		8459558D2418E8EC00046E7A /* SwitchThumbView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwitchThumbView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +191,10 @@
 				8423D1442414C1A400360C03 /* TabBarItem.m */,
 				8423D13F2414C1A300360C03 /* TitleBar.h */,
 				8423D1402414C1A300360C03 /* TitleBar.m */,
+				845955892418E8AB00046E7A /* SwitchButton.h */,
+				8459558A2418E8AB00046E7A /* SwitchButton.m */,
+				8459558C2418E8EC00046E7A /* SwitchThumbView.h */,
+				8459558D2418E8EC00046E7A /* SwitchThumbView.m */,
 				843F02382418B1E20011B566 /* CustomSwitch.swift */,
 				843F02392418B1E20011B566 /* CustomThumbView.swift */,
 			);
@@ -363,6 +373,8 @@
 				8423D14D2414C1FD00360C03 /* ViewController.swift in Sources */,
 				8423D14E2414C1FD00360C03 /* ModeViewController.swift in Sources */,
 				8423D1452414C1A400360C03 /* TitleBar.m in Sources */,
+				8459558B2418E8AB00046E7A /* SwitchButton.m in Sources */,
+				8459558E2418E8EC00046E7A /* SwitchThumbView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
