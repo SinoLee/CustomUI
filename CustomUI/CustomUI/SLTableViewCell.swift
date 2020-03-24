@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SLTableViewCell: UITableViewCell {
+open class SLTableViewCell: UITableViewCell {
     
     public var titleLabel = UILabel()
 
@@ -16,7 +16,7 @@ class SLTableViewCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         initialize()
     }
-    required init?(coder: NSCoder) {
+    required public init?(coder: NSCoder) {
         super.init(coder: coder)
         initialize()
     }
@@ -27,12 +27,12 @@ class SLTableViewCell: UITableViewCell {
     // MARK: - Initialize Items
     
 
-    override func awakeFromNib() {
+    override open func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
+    override open func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state

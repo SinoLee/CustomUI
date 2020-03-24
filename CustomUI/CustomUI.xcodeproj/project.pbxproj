@@ -10,6 +10,9 @@
 		845B124A2428B79D0049D203 /* CustomUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 845B12482428B79D0049D203 /* CustomUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		845B12532428B8190049D203 /* SLTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845B12522428B8190049D203 /* SLTableViewCell.swift */; };
 		845B12552428B82F0049D203 /* SLTitleBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845B12542428B82F0049D203 /* SLTitleBar.swift */; };
+		845B12C6242A30D40049D203 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 845B12C5242A30D40049D203 /* Assets.xcassets */; };
+		845B12C8242AA4F60049D203 /* NSLayoutConstraintExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845B12C7242AA4F60049D203 /* NSLayoutConstraintExtensions.swift */; };
+		845B12CA242AA5BA0049D203 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845B12C9242AA5BA0049D203 /* UIViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,6 +21,9 @@
 		845B12492428B79D0049D203 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		845B12522428B8190049D203 /* SLTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLTableViewCell.swift; sourceTree = "<group>"; };
 		845B12542428B82F0049D203 /* SLTitleBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLTitleBar.swift; sourceTree = "<group>"; };
+		845B12C5242A30D40049D203 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		845B12C7242AA4F60049D203 /* NSLayoutConstraintExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSLayoutConstraintExtensions.swift; sourceTree = "<group>"; };
+		845B12C9242AA5BA0049D203 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +57,11 @@
 			isa = PBXGroup;
 			children = (
 				845B12482428B79D0049D203 /* CustomUI.h */,
-				845B12522428B8190049D203 /* SLTableViewCell.swift */,
+				845B12C9242AA5BA0049D203 /* UIViewExtension.swift */,
+				845B12C7242AA4F60049D203 /* NSLayoutConstraintExtensions.swift */,
 				845B12542428B82F0049D203 /* SLTitleBar.swift */,
+				845B12522428B8190049D203 /* SLTableViewCell.swift */,
+				845B12C5242A30D40049D203 /* Assets.xcassets */,
 				845B12492428B79D0049D203 /* Info.plist */,
 			);
 			path = CustomUI;
@@ -128,6 +137,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				845B12C6242A30D40049D203 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,7 +148,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				845B12C8242AA4F60049D203 /* NSLayoutConstraintExtensions.swift in Sources */,
 				845B12532428B8190049D203 /* SLTableViewCell.swift in Sources */,
+				845B12CA242AA5BA0049D203 /* UIViewExtension.swift in Sources */,
 				845B12552428B82F0049D203 /* SLTitleBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

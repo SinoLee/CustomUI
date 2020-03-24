@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import CustomUI
 
 class ViewController: UIViewController {
+    
+    var titleBar0: SLTitleBar?
     
     var customSwitch: CustomSwitch = {
         // https://github.com/factoryhr/CustomUISwitch
