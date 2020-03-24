@@ -1,0 +1,6 @@
+module Pods_CustomUIComponent {
+  umbrella header "Pods-CustomUIComponent-umbrella.h"
+
+  export *
+  module * { export * }
+}
