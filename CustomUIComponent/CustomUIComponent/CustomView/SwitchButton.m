@@ -110,17 +110,34 @@
     [self setupUI];
 }
 
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        [self initializeValue];
+        [self setupUI];
+    }
+    return self;
+}
+
 - (instancetype)initWithCoder:(NSCoder *)coder {
     self = [super initWithCoder:coder];
     if (self) {
-        CGRect frame = coder.accessibilityFrame;
-        [self drawRect:frame];
+        [self initializeValue];
+        [self setupUI];
+    }
+    return self;
+}
+- (instancetype)initWithFrame:(CGRect)frame {
+    self = [super initWithFrame:frame];
+    if (self) {
+        [self initializeValue];
         [self setupUI];
     }
     return self;
 }
 
 - (void)initializeValue {
+    // CustomThumbView SwitchThumbView
     _thumbView = [[SwitchThumbView alloc] initWithFrame:CGRectZero];
     _isOn = NO;
     _padding = 1.0;

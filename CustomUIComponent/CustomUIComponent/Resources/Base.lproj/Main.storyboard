@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16095" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lxL-zT-sb1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16092.1" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lxL-zT-sb1">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16084.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16082.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -55,7 +55,15 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mp3-TH-Vtc">
                                 <rect key="frame" x="87" y="328" width="240" height="240"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sad-f3-wD5" customClass="SwitchButton">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fIc-tW-fBW" customClass="CustomSwitch" customModule="CustomUIComponent" customModuleProvider="target">
+                                        <rect key="frame" x="98.5" y="58.5" width="43" height="23"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="23" id="die-di-rf5"/>
+                                            <constraint firstAttribute="width" constant="43" id="ii7-kb-zPL"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sad-f3-wD5" customClass="SwitchButton" customModule="CustomUIComponent" customModuleProvider="target">
                                         <rect key="frame" x="98.5" y="109.5" width="43" height="21"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
@@ -63,12 +71,24 @@
                                             <constraint firstAttribute="height" constant="21" id="ZAb-J5-KpC"/>
                                         </constraints>
                                     </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SBT-lt-jay" customClass="SwitchControl" customModule="CustomUIComponent" customModuleProvider="target">
+                                        <rect key="frame" x="95" y="158.5" width="50" height="23"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="23" id="FRe-77-Yjb"/>
+                                            <constraint firstAttribute="width" constant="50" id="blQ-VU-Ipc"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="Jgf-2p-2q0"/>
                                     <constraint firstAttribute="height" constant="240" id="MNi-h8-p07"/>
+                                    <constraint firstItem="fIc-tW-fBW" firstAttribute="centerX" secondItem="Mp3-TH-Vtc" secondAttribute="centerX" id="MjP-eD-djr"/>
                                     <constraint firstItem="sad-f3-wD5" firstAttribute="centerX" secondItem="Mp3-TH-Vtc" secondAttribute="centerX" id="SnO-qN-Qtd"/>
+                                    <constraint firstItem="SBT-lt-jay" firstAttribute="centerY" secondItem="Mp3-TH-Vtc" secondAttribute="centerY" constant="50" id="X4R-Ue-FRK"/>
+                                    <constraint firstItem="SBT-lt-jay" firstAttribute="centerX" secondItem="Mp3-TH-Vtc" secondAttribute="centerX" id="bdp-W9-97r"/>
+                                    <constraint firstItem="fIc-tW-fBW" firstAttribute="centerY" secondItem="Mp3-TH-Vtc" secondAttribute="centerY" constant="-50" id="pjX-zQ-udj"/>
                                     <constraint firstItem="sad-f3-wD5" firstAttribute="centerY" secondItem="Mp3-TH-Vtc" secondAttribute="centerY" id="wmH-jr-3mw"/>
                                 </constraints>
                             </view>
@@ -93,7 +113,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="223" y="-38"/>
+            <point key="canvasLocation" x="221.73913043478262" y="-38.169642857142854"/>
         </scene>
         <!--Mode And Automation View Controller-->
         <scene sceneID="BXe-MO-6Jf">

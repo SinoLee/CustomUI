@@ -16,19 +16,21 @@ IB_DESIGNABLE
 
 @property (nonatomic) IBInspectable BOOL isOn;
 @property (nonatomic) IBInspectable CGFloat padding;
-@property (nonatomic) IBInspectable UIColor *onTintColor;
-@property (nonatomic) IBInspectable UIColor *offTintColor;
+@property (strong, nonatomic) IBInspectable UIColor *offTintColor;
+@property (strong, nonatomic) IBInspectable UIColor *onTintColor;
 @property (nonatomic) IBInspectable CGFloat cornerRadius;
-@property (nonatomic) IBInspectable UIColor *thumbTintColor;
+    // thumb properties
+@property (strong, nonatomic) IBInspectable UIColor *thumbTintColor;
 @property (nonatomic) IBInspectable CGFloat thumbCornerRadius;
 @property (nonatomic) IBInspectable CGSize thumbSize;
-@property (nonatomic) IBInspectable UIImage *thumbImage;
-
-@property (nonatomic) IBInspectable UIColor *thumbShadowColor;
+@property (strong, nonatomic) IBInspectable UIImage *thumbImage;
+    // dodati kasnije
+@property (strong, nonatomic) IBInspectable UIColor *thumbShadowColor;
 @property (nonatomic) IBInspectable CGSize thumbShadowOffset;
-@property (nonatomic) IBInspectable CGFloat thumbShadowRadius;
-@property (nonatomic) IBInspectable CGFloat thumbShadowOpacity;
+@property (nonatomic) IBInspectable CGFloat thumbShaddowRadius;
+@property (nonatomic) IBInspectable CGFloat thumbShaddowOppacity;
 
+- (instancetype)initWithCoder:(NSCoder *)coder;
 
 @end
 

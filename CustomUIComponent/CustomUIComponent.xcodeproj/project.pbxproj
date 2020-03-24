@@ -23,6 +23,7 @@
 		8423D14E2414C1FD00360C03 /* ModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8423D14A2414C1FD00360C03 /* ModeViewController.swift */; };
 		8423D14F2414C1FD00360C03 /* ModeAndAutomationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8423D14B2414C1FD00360C03 /* ModeAndAutomationViewController.m */; };
 		8423D1502414C1FD00360C03 /* AutomationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8423D14C2414C1FD00360C03 /* AutomationViewController.swift */; };
+		8423D1922419063D00360C03 /* SwitchControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 8423D1912419063D00360C03 /* SwitchControl.m */; };
 		843F023A2418B1E20011B566 /* CustomSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843F02382418B1E20011B566 /* CustomSwitch.swift */; };
 		843F023B2418B1E20011B566 /* CustomThumbView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843F02392418B1E20011B566 /* CustomThumbView.swift */; };
 		8459558B2418E8AB00046E7A /* SwitchButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8459558A2418E8AB00046E7A /* SwitchButton.m */; };
@@ -75,6 +76,8 @@
 		8423D14A2414C1FD00360C03 /* ModeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModeViewController.swift; sourceTree = "<group>"; };
 		8423D14B2414C1FD00360C03 /* ModeAndAutomationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModeAndAutomationViewController.m; sourceTree = "<group>"; };
 		8423D14C2414C1FD00360C03 /* AutomationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutomationViewController.swift; sourceTree = "<group>"; };
+		8423D1902419063D00360C03 /* SwitchControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwitchControl.h; sourceTree = "<group>"; };
+		8423D1912419063D00360C03 /* SwitchControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwitchControl.m; sourceTree = "<group>"; };
 		843F02382418B1E20011B566 /* CustomSwitch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSwitch.swift; sourceTree = "<group>"; };
 		843F02392418B1E20011B566 /* CustomThumbView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomThumbView.swift; sourceTree = "<group>"; };
 		845955892418E8AB00046E7A /* SwitchButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwitchButton.h; sourceTree = "<group>"; };
@@ -191,6 +194,8 @@
 				8423D1442414C1A400360C03 /* TabBarItem.m */,
 				8423D13F2414C1A300360C03 /* TitleBar.h */,
 				8423D1402414C1A300360C03 /* TitleBar.m */,
+				8423D1902419063D00360C03 /* SwitchControl.h */,
+				8423D1912419063D00360C03 /* SwitchControl.m */,
 				845955892418E8AB00046E7A /* SwitchButton.h */,
 				8459558A2418E8AB00046E7A /* SwitchButton.m */,
 				8459558C2418E8EC00046E7A /* SwitchThumbView.h */,
@@ -373,6 +378,7 @@
 				8423D14D2414C1FD00360C03 /* ViewController.swift in Sources */,
 				8423D14E2414C1FD00360C03 /* ModeViewController.swift in Sources */,
 				8423D1452414C1A400360C03 /* TitleBar.m in Sources */,
+				8423D1922419063D00360C03 /* SwitchControl.m in Sources */,
 				8459558B2418E8AB00046E7A /* SwitchButton.m in Sources */,
 				8459558E2418E8EC00046E7A /* SwitchThumbView.m in Sources */,
 			);
