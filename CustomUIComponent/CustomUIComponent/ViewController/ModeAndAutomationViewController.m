@@ -7,12 +7,12 @@
 //
 
 #import "ModeAndAutomationViewController.h"
-#import "TitleBar.h"
+//#import "TitleBar.h"
 #import "TabBar.h"
 //#import "CustomTabbar.h"
 
 @interface ModeAndAutomationViewController () <UITabBarDelegate>
-@property (weak, nonatomic) IBOutlet TitleBar *titleBar;
+//@property (weak, nonatomic) IBOutlet TitleBar *titleBar;
 @property (weak, nonatomic) IBOutlet TabBar *tabBar;
 
 @end
@@ -22,8 +22,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self.titleBar setTitle:@"Title"];
-    [self.titleBar setTarget:self backAction:@selector(goBack)];
+//    [self.titleBar setTitle:@"Title"];
+//    [self.titleBar setTarget:self backAction:@selector(goBack)];
     
     [self.tabBar addItems:@[
         [[TabBarItem alloc] initWithTitle:@"Mode" viewController:@"ModeViewController"],

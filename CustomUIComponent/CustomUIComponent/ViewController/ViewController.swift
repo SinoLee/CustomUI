@@ -10,8 +10,8 @@ import UIKit
 import CustomUI
 
 class ViewController: UIViewController {
-    
-    var titleBar0: SLTitleBar?
+        
+    var tb: TitleBar?
     
     var customSwitch: CustomSwitch = {
         // https://github.com/factoryhr/CustomUISwitch
@@ -22,15 +22,16 @@ class ViewController: UIViewController {
         return customSwitch
     }()
     
-    @IBOutlet weak var titleBar: TitleBar!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        self.titleBar.setTitle("Title ...1234567890123456789012345678901234567")
-        let v = UIView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
-        v.backgroundColor = .black
-        self.titleBar.actionView = v
+        let sw = SLSwittch()
+        sw.frame = CGRect(x: 100, y: 100, width: 40, height: 26)
+        view.addSubview(sw)
+//        self.titleBar.setTitle("Title ...1234567890123456789012345678901234567")
+//        let v = UIView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
+//        v.backgroundColor = .black
+//        self.titleBar.actionView = v
     }
 
 

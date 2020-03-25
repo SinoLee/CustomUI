@@ -8,6 +8,37 @@
 
 import UIKit
 
+//@IBDesignable
+//class TitleBar: UIView {
+//
+//    @IBInspectable public var title: String? {
+//        didSet {
+//            titleLabel.text = title
+//            setupUI()
+//        }
+//    }
+//    @IBInspectable public var titleColor: UIColor = .black {
+//        didSet {
+//            titleLabel.textColor = titleColor
+//            setupUI()
+//        }
+//    }
+//    @IBInspectable public var underlineColor: UIColor = .gray {
+//        didSet {
+//            underlineView.backgroundColor = underlineColor
+//            setupUI()
+//        }
+//    }
+//
+//    // MARK: Private properties
+//    fileprivate var backButton = UIButton(type: .system)
+//    //fileprivate var leftActionView: UIView?
+//    //fileprivate var rightActionView: UIView?
+//    fileprivate var titleLabel = UILabel(frame: .zero)
+//    fileprivate var underlineView = UIView(frame: .zero)
+//}
+//
+
 open class SLTitleBar: UIView {
     
     private lazy var actionView: UIView = {
@@ -68,26 +99,26 @@ open class SLTitleBar: UIView {
     private func updateLayoutActionView() {
         actionView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            actionView.constraintWidth(36.0),
-            actionView.constraintHeight(36.0),
-            actionView.constraintCenterX(self),
-            actionView.constraintCenterY(self)
+            actionView.width(36.0),
+            actionView.height(36.0),
+            actionView.centerX(),
+            actionView.centerY()
         ])
     }
     private func updateLayoutBackButton() {
         backButton.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            backButton.constraintWidth(24.0),
-            backButton.constraintHeight(24.0),
-            backButton.constraintCenterX(actionView),
-            backButton.constraintCenterY(actionView)
+            backButton.width(24.0),
+            backButton.height(24.0),
+            backButton.centerX(),
+            backButton.centerY()
         ])
     }
     private func updateLayoutTitleLabel() {
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        let centerY = titleLabel.constraintCenterY(self)
-        let lead = titleLabel.constraintLead(actionView, space: 4.0)
-        let trail = titleLabel.constraintTrail(self, space: 24)
+        let centerY = titleLabel.centerY()
+        let lead = titleLabel.leading(actionView, space: 4.0)
+        let trail = titleLabel.alignTrailing(24.0)
         NSLayoutConstraint.activate([
             centerY,
             lead,
@@ -95,7 +126,13 @@ open class SLTitleBar: UIView {
         ])
     }
     private func updateLayoutUnderline() {
-        
+        underline.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            underline.height(2.0),
+            underline.alignLeading(8.0),
+            underline.alignTrailing(8.0),
+            underline.alignBottom(2.0)
+        ])
     }
     public func updateActionView(_ view: UIView, size: CGSize? = nil) {
         for subview in actionView.subviews {
@@ -105,14 +142,16 @@ open class SLTitleBar: UIView {
         let viewSize = size ?? view.frame.size
         view.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            view.constraintWidth(viewSize.width),
-            view.constraintHeight(viewSize.height),
-            view.constraintCenterX(actionView),
-            view.constraintCenterY(actionView)
+            view.width(viewSize.width),
+            view.height(viewSize.height),
+            view.centerX(),
+            view.centerY()
         ])
     }
     
     @objc func touchUpBack() {
         print("# Back button")
+        guard let vc = actionTarget else { return }
+        vc.dismissOrPop(animated: true)
     }
 }

@@ -23,7 +23,6 @@
 		845B12B5242A1FDE0049D203 /* SwitchThumbView.m in Sources */ = {isa = PBXBuildFile; fileRef = 845B12A7242A1FDD0049D203 /* SwitchThumbView.m */; };
 		845B12B6242A1FDE0049D203 /* CustomThumbView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845B12A9242A1FDE0049D203 /* CustomThumbView.swift */; };
 		845B12B7242A1FDE0049D203 /* SwitchControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 845B12AA242A1FDE0049D203 /* SwitchControl.m */; };
-		845B12B8242A1FDE0049D203 /* TitleBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 845B12AC242A1FDE0049D203 /* TitleBar.m */; };
 		845B12B9242A1FDE0049D203 /* TabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 845B12AE242A1FDE0049D203 /* TabBarItem.m */; };
 		845B12BA242A1FDE0049D203 /* CustomSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845B12AF242A1FDE0049D203 /* CustomSwitch.swift */; };
 		845B12BB242A1FDE0049D203 /* TabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 845B12B2242A1FDE0049D203 /* TabBar.m */; };
@@ -31,6 +30,8 @@
 		845B12C1242A204E0049D203 /* ModeAndAutomationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 845B12BD242A204D0049D203 /* ModeAndAutomationViewController.m */; };
 		845B12C2242A204E0049D203 /* ModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845B12BE242A204E0049D203 /* ModeViewController.swift */; };
 		845B12C3242A204E0049D203 /* AutomationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845B12BF242A204E0049D203 /* AutomationViewController.swift */; };
+		845B12E1242BFAA10049D203 /* KnobControl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 845B12E0242BFAA10049D203 /* KnobControl.framework */; };
+		845B12E2242BFAA10049D203 /* KnobControl.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 845B12E0242BFAA10049D203 /* KnobControl.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				845B12E2242BFAA10049D203 /* KnobControl.framework in Embed Frameworks */,
 				845B129B242A1AD20049D203 /* CustomUI.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -88,8 +90,6 @@
 		845B12A8242A1FDE0049D203 /* SwitchThumbView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwitchThumbView.h; sourceTree = "<group>"; };
 		845B12A9242A1FDE0049D203 /* CustomThumbView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomThumbView.swift; sourceTree = "<group>"; };
 		845B12AA242A1FDE0049D203 /* SwitchControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwitchControl.m; sourceTree = "<group>"; };
-		845B12AB242A1FDE0049D203 /* TitleBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleBar.h; sourceTree = "<group>"; };
-		845B12AC242A1FDE0049D203 /* TitleBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleBar.m; sourceTree = "<group>"; };
 		845B12AD242A1FDE0049D203 /* SwitchButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwitchButton.h; sourceTree = "<group>"; };
 		845B12AE242A1FDE0049D203 /* TabBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarItem.m; sourceTree = "<group>"; };
 		845B12AF242A1FDE0049D203 /* CustomSwitch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSwitch.swift; sourceTree = "<group>"; };
@@ -103,6 +103,7 @@
 		845B12BF242A204E0049D203 /* AutomationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutomationViewController.swift; sourceTree = "<group>"; };
 		845B12C0242A204E0049D203 /* ModeAndAutomationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModeAndAutomationViewController.h; sourceTree = "<group>"; };
 		845B12C4242A20E20049D203 /* CustomUIComponent-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CustomUIComponent-Bridging-Header.h"; sourceTree = "<group>"; };
+		845B12E0242BFAA10049D203 /* KnobControl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = KnobControl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		931DF751CBFFFDC09638CB73 /* libPods-CustomUIComponent.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CustomUIComponent.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD3FA79E2D2E65D1BFFBE4EE /* Pods-CustomUIComponent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomUIComponent.release.xcconfig"; path = "Target Support Files/Pods-CustomUIComponent/Pods-CustomUIComponent.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -112,6 +113,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				845B12E1242BFAA10049D203 /* KnobControl.framework in Frameworks */,
 				431D0E4657F876567879E57C /* libPods-CustomUIComponent.a in Frameworks */,
 				845B129A242A1AD20049D203 /* CustomUI.framework in Frameworks */,
 			);
@@ -146,6 +148,7 @@
 		3C34FBABC22C0B370B2537EB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				845B12E0242BFAA10049D203 /* KnobControl.framework */,
 				845B1299242A1AD20049D203 /* CustomUI.framework */,
 				931DF751CBFFFDC09638CB73 /* libPods-CustomUIComponent.a */,
 			);
@@ -270,8 +273,6 @@
 				845B12B2242A1FDE0049D203 /* TabBar.m */,
 				845B12B1242A1FDE0049D203 /* TabBarItem.h */,
 				845B12AE242A1FDE0049D203 /* TabBarItem.m */,
-				845B12AB242A1FDE0049D203 /* TitleBar.h */,
-				845B12AC242A1FDE0049D203 /* TitleBar.m */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -450,7 +451,6 @@
 				845B1269242A19ED0049D203 /* SceneDelegate.swift in Sources */,
 				845B12B5242A1FDE0049D203 /* SwitchThumbView.m in Sources */,
 				845B12BC242A1FDE0049D203 /* SwitchButton.m in Sources */,
-				845B12B8242A1FDE0049D203 /* TitleBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -626,6 +626,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 75RG233849;
 				INFOPLIST_FILE = CustomUIComponent/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -647,6 +648,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 75RG233849;
 				INFOPLIST_FILE = CustomUIComponent/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -8,6 +8,8 @@
 
 #import "TitleBar.h"
 #import "NSLayoutConstraint+utils.h"
+#import <CustomUIComponent-Swift.h>
+#import <CustomUI/CustomUI.h>
 
 @interface TitleBar ()
 {
@@ -111,15 +113,12 @@
 #pragma mark - UpdateLayout View Items
 - (void)updateLayoutLeftActionView {
     [self.leftActionView setTranslatesAutoresizingMaskIntoConstraints:NO];
-    UIView *layoutView = self.leftActionView;
-    UIView *superView = self;
-
-    NSLayoutConstraint *widthConstraint = [NSLayoutConstraint widthConstraint:36.f view:layoutView];
-    NSLayoutConstraint *heightConstraint = [NSLayoutConstraint heightConstraint:36.f view:layoutView];
-    NSLayoutConstraint *centerY = [NSLayoutConstraint yAlignment:0.f view:layoutView superView:superView];
-    NSLayoutConstraint *leading = [NSLayoutConstraint leadingConstraint:8.f firstView:layoutView baseView:superView];
-    
-    [NSLayoutConstraint activateConstraints:@[widthConstraint, heightConstraint, centerY, leading]];
+    [NSLayoutConstraint activateConstraints:@[
+        [self.leftActionView width:36],
+        [self.leftActionView height:36],
+        [self.leftActionView centerY],
+        [self.leftActionView alignLeading:8]
+    ]];
 }
 - (void)updateLayoutActionView {
     if (!self.actionView) {
@@ -127,23 +126,21 @@
     }
     CGSize size = self.actionView.frame.size;
     [self.actionView setTranslatesAutoresizingMaskIntoConstraints:NO];
-
-    NSLayoutConstraint *widthConstraint = [NSLayoutConstraint widthConstraint:size.width view:self.actionView];
-    NSLayoutConstraint *heightConstraint = [NSLayoutConstraint heightConstraint:size.height view:self.actionView];
-    NSLayoutConstraint *centerY = [NSLayoutConstraint yAlignment:0.f view:self.actionView superView:self];
-    NSLayoutConstraint *trailing = [NSLayoutConstraint trailingConstraint:8.f firstView:self.actionView baseView:self];
-    
-    [NSLayoutConstraint activateConstraints:@[widthConstraint, heightConstraint, centerY, trailing]];
+    [NSLayoutConstraint activateConstraints:@[
+        [self.actionView width:size.width],
+        [self.actionView height:size.height],
+        [self.actionView centerY],
+        [self.actionView alignTrailing:8]
+    ]];
 }
 - (void)updateLayoutUnderline {
     [self.underline setTranslatesAutoresizingMaskIntoConstraints:NO];
-
-    NSLayoutConstraint *heightConstraint = [NSLayoutConstraint heightConstraint:2.f view:self.underline];
-    NSLayoutConstraint *leading = [NSLayoutConstraint leadingConstraint:0.f firstView:self.underline baseView:self];
-    NSLayoutConstraint *trailing = [NSLayoutConstraint trailingConstraint:0.f firstView:self.underline baseView:self];
-    NSLayoutConstraint *bottom = [NSLayoutConstraint bottomConstraint:2.f firstView:self.underline baseView:self];
-    
-    [NSLayoutConstraint activateConstraints:@[heightConstraint, leading, trailing, bottom]];
+    [NSLayoutConstraint activateConstraints:@[
+        [self.underline height:2],
+        [self.underline alignLeading:8],
+        [self.underline alignTrailing:8],
+        [self.underline alignBottom:2]
+    ]];
 }
 - (void)updateLayoutBackButton {
     if (!self.backButton) {
