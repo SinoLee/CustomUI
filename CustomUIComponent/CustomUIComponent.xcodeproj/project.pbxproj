@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		431D0E4657F876567879E57C /* libPods-CustomUIComponent.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 931DF751CBFFFDC09638CB73 /* libPods-CustomUIComponent.a */; };
+		5849F205244ACC120037D069 /* SLToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 5849F204244ACC120037D069 /* SLToolBar.m */; };
 		845B1267242A19ED0049D203 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845B1266242A19ED0049D203 /* AppDelegate.swift */; };
 		845B1269242A19ED0049D203 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845B1268242A19ED0049D203 /* SceneDelegate.swift */; };
 		845B126B242A19ED0049D203 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845B126A242A19ED0049D203 /* ViewController.swift */; };
@@ -68,6 +69,9 @@
 
 /* Begin PBXFileReference section */
 		10D7F0297E45FD3C49C7928B /* Pods-CustomUIComponent.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomUIComponent.debug.xcconfig"; path = "Target Support Files/Pods-CustomUIComponent/Pods-CustomUIComponent.debug.xcconfig"; sourceTree = "<group>"; };
+		5849F202244ACC120037D069 /* SLToolBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SLToolBar.xib; sourceTree = "<group>"; };
+		5849F203244ACC120037D069 /* SLToolBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLToolBar.h; sourceTree = "<group>"; };
+		5849F204244ACC120037D069 /* SLToolBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLToolBar.m; sourceTree = "<group>"; };
 		845B1263242A19ED0049D203 /* CustomUIComponent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomUIComponent.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		845B1266242A19ED0049D203 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		845B1268242A19ED0049D203 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -261,6 +265,9 @@
 		845B12A6242A1FAF0049D203 /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
+				5849F203244ACC120037D069 /* SLToolBar.h */,
+				5849F204244ACC120037D069 /* SLToolBar.m */,
+				5849F202244ACC120037D069 /* SLToolBar.xib */,
 				845B12AF242A1FDE0049D203 /* CustomSwitch.swift */,
 				845B12A9242A1FDE0049D203 /* CustomThumbView.swift */,
 				845B12AD242A1FDE0049D203 /* SwitchButton.h */,
@@ -444,6 +451,7 @@
 				845B12BB242A1FDE0049D203 /* TabBar.m in Sources */,
 				845B126B242A19ED0049D203 /* ViewController.swift in Sources */,
 				845B1267242A19ED0049D203 /* AppDelegate.swift in Sources */,
+				5849F205244ACC120037D069 /* SLToolBar.m in Sources */,
 				845B12B6242A1FDE0049D203 /* CustomThumbView.swift in Sources */,
 				845B12C3242A204E0049D203 /* AutomationViewController.swift in Sources */,
 				845B1271242A19ED0049D203 /* CustomUIComponent.xcdatamodeld in Sources */,

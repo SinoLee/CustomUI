@@ -8,38 +8,34 @@
 
 import UIKit
 
-//@IBDesignable
-//class TitleBar: UIView {
-//
-//    @IBInspectable public var title: String? {
-//        didSet {
-//            titleLabel.text = title
-//            setupUI()
+@IBDesignable public class SLTitleBar: UIView {
+    
+    @IBInspectable public var title: String? {
+        didSet {
+            titleLabel.text = title
+        }
+    }
+    @IBInspectable public var titleColor: UIColor = .black {
+        didSet {
+            
+        }
+    }
+//    @IBInspectable var borderColor: UIColor? {
+//        get {
+//            return UIColor(cgColor: layer.borderColor!)
+//        }
+//        set {
+//            layer.borderColor = newValue?.cgColor
 //        }
 //    }
-//    @IBInspectable public var titleColor: UIColor = .black {
-//        didSet {
-//            titleLabel.textColor = titleColor
-//            setupUI()
+//    @IBInspectable var borderWidth: CGFloat {
+//        get {
+//            return layer.borderWidth
+//        }
+//        set {
+//            layer.borderWidth = newValue
 //        }
 //    }
-//    @IBInspectable public var underlineColor: UIColor = .gray {
-//        didSet {
-//            underlineView.backgroundColor = underlineColor
-//            setupUI()
-//        }
-//    }
-//
-//    // MARK: Private properties
-//    fileprivate var backButton = UIButton(type: .system)
-//    //fileprivate var leftActionView: UIView?
-//    //fileprivate var rightActionView: UIView?
-//    fileprivate var titleLabel = UILabel(frame: .zero)
-//    fileprivate var underlineView = UIView(frame: .zero)
-//}
-//
-
-open class SLTitleBar: UIView {
     
     private lazy var actionView: UIView = {
         let view = UIView()
@@ -60,28 +56,83 @@ open class SLTitleBar: UIView {
     
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 17)
+        label.font = UIFont.systemFont(ofSize: 24)
         label.textColor = .black
         return label
     }()
     
-    public var title: String? {
-        didSet {
-            titleLabel.text = title
-        }
-    }
-    
     public init(title: String) {
         super.init(frame: CGRect())
-        initialize()
+        initializeLayer()
+        initializeLabel()
+        initializeActionView()
     }
     public override init(frame: CGRect) {
         super.init(frame: frame)
-        initialize()
+        initializeLayer()
+        initializeLabel()
+        initializeActionView()
     }
     public required init?(coder: NSCoder) {
         super.init(coder: coder)
-        initialize()
+        initializeLayer()
+        initializeLabel()
+        initializeActionView()
+    }
+    
+    // Shadow Layer
+    // https://stackoverflow.com/questions/4754392/uiview-with-rounded-corners-and-drop-shadow/43295741
+    private var shadowLayer: CAShapeLayer!
+    private var fillColor: UIColor = .white
+    
+    public override func layoutSubviews() {
+        super.layoutSubviews()
+
+        if shadowLayer == nil {
+            shadowLayer = CAShapeLayer()
+          
+            shadowLayer.path = UIBezierPath(roundedRect: bounds, cornerRadius: 0.0).cgPath
+            shadowLayer.fillColor = fillColor.cgColor
+
+            shadowLayer.shadowColor = UIColor.black.cgColor
+            shadowLayer.shadowPath = shadowLayer.path
+            shadowLayer.shadowOffset = CGSize(width: 0.0, height: 1.0)
+            shadowLayer.shadowOpacity = 0.2
+            shadowLayer.shadowRadius = 3
+
+            layer.insertSublayer(shadowLayer, at: 0)
+        }
+    }
+}
+
+extension SLTitleBar {
+    
+    private func initializeLayer() {
+        layer.backgroundColor = UIColor.clear.cgColor
+        layer.shadowColor = UIColor.black.cgColor
+        layer.shadowOffset = CGSize(width: 0, height: 1.0)
+        layer.shadowOpacity = 0.2
+        layer.shadowRadius = 4.0
+    }
+    
+    private func initializeLabel() {
+        addSubview(titleLabel)
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            NSLayoutConstraint(item: titleLabel, attribute: .centerX, relatedBy: .equal, toItem: self, attribute: .centerX, multiplier: 1.0, constant: 1.0),
+            NSLayoutConstraint(item: titleLabel, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 1.0, constant: 1.0),
+        ])
+    }
+    private func initializeActionView() {
+        addSubview(actionView)
+        actionView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            actionView.width(36.0),
+            actionView.height(36.0),
+            actionView.centerX(),
+            actionView.centerY()
+        ])
     }
     
     private func initialize() {

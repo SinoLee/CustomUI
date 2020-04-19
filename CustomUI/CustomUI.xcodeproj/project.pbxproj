@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		58049E5E244CB06B00F03E09 /* ToolBar2.m in Sources */ = {isa = PBXBuildFile; fileRef = 58049E5A244CB06A00F03E09 /* ToolBar2.m */; };
+		58049E5F244CB06B00F03E09 /* ToolBar.h in Headers */ = {isa = PBXBuildFile; fileRef = 58049E5B244CB06A00F03E09 /* ToolBar.h */; };
+		58049E60244CB06B00F03E09 /* ToolBar2.h in Headers */ = {isa = PBXBuildFile; fileRef = 58049E5C244CB06B00F03E09 /* ToolBar2.h */; };
+		58049E61244CB06B00F03E09 /* ToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 58049E5D244CB06B00F03E09 /* ToolBar.m */; };
+		5849F1FE244A81210037D069 /* SLToolBar.h in Headers */ = {isa = PBXBuildFile; fileRef = 5849F1FC244A81210037D069 /* SLToolBar.h */; };
+		5849F1FF244A81210037D069 /* SLToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 5849F1FD244A81210037D069 /* SLToolBar.m */; };
+		5849F201244A81300037D069 /* SLToolBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5849F200244A81300037D069 /* SLToolBar.xib */; };
+		586CB1E22435255B00BCB335 /* SLTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 586CB1E12435255B00BCB335 /* SLTableViewCell.xib */; };
 		845B124A2428B79D0049D203 /* CustomUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 845B12482428B79D0049D203 /* CustomUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		845B12532428B8190049D203 /* SLTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845B12522428B8190049D203 /* SLTableViewCell.swift */; };
 		845B12552428B82F0049D203 /* SLTitleBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845B12542428B82F0049D203 /* SLTitleBar.swift */; };
@@ -19,6 +27,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		58049E5A244CB06A00F03E09 /* ToolBar2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToolBar2.m; sourceTree = "<group>"; };
+		58049E5B244CB06A00F03E09 /* ToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToolBar.h; sourceTree = "<group>"; };
+		58049E5C244CB06B00F03E09 /* ToolBar2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToolBar2.h; sourceTree = "<group>"; };
+		58049E5D244CB06B00F03E09 /* ToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToolBar.m; sourceTree = "<group>"; };
+		5849F1FC244A81210037D069 /* SLToolBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SLToolBar.h; path = ../../CustomUIComponent/CustomUIComponent/CustomView/SLToolBar.h; sourceTree = "<group>"; };
+		5849F1FD244A81210037D069 /* SLToolBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SLToolBar.m; path = ../../CustomUIComponent/CustomUIComponent/CustomView/SLToolBar.m; sourceTree = "<group>"; };
+		5849F200244A81300037D069 /* SLToolBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SLToolBar.xib; path = ../../CustomUIComponent/CustomUIComponent/CustomView/SLToolBar.xib; sourceTree = "<group>"; };
+		586CB1E12435255B00BCB335 /* SLTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SLTableViewCell.xib; sourceTree = "<group>"; };
 		845B12452428B79D0049D203 /* CustomUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CustomUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		845B12482428B79D0049D203 /* CustomUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomUI.h; sourceTree = "<group>"; };
 		845B12492428B79D0049D203 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -66,9 +82,17 @@
 				845B12482428B79D0049D203 /* CustomUI.h */,
 				845B12542428B82F0049D203 /* SLTitleBar.swift */,
 				845B12D2242BE71D0049D203 /* TitleBar.swift */,
+				58049E5B244CB06A00F03E09 /* ToolBar.h */,
+				58049E5D244CB06B00F03E09 /* ToolBar.m */,
+				58049E5C244CB06B00F03E09 /* ToolBar2.h */,
+				58049E5A244CB06A00F03E09 /* ToolBar2.m */,
 				845B12522428B8190049D203 /* SLTableViewCell.swift */,
+				586CB1E12435255B00BCB335 /* SLTableViewCell.xib */,
 				845B12CE242BE2C10049D203 /* SLSwittch.swift */,
 				845B12D0242BE2F30049D203 /* SLThumbView.swift */,
+				5849F1FC244A81210037D069 /* SLToolBar.h */,
+				5849F1FD244A81210037D069 /* SLToolBar.m */,
+				5849F200244A81300037D069 /* SLToolBar.xib */,
 				845B12C5242A30D40049D203 /* Assets.xcassets */,
 				845B12492428B79D0049D203 /* Info.plist */,
 			);
@@ -91,7 +115,10 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58049E5F244CB06B00F03E09 /* ToolBar.h in Headers */,
+				58049E60244CB06B00F03E09 /* ToolBar2.h in Headers */,
 				845B124A2428B79D0049D203 /* CustomUI.h in Headers */,
+				5849F1FE244A81210037D069 /* SLToolBar.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,7 +154,7 @@
 				TargetAttributes = {
 					845B12442428B79D0049D203 = {
 						CreatedOnToolsVersion = 11.3.1;
-						LastSwiftMigration = 1130;
+						LastSwiftMigration = 1140;
 					};
 				};
 			};
@@ -154,7 +181,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				586CB1E22435255B00BCB335 /* SLTableViewCell.xib in Resources */,
 				845B12C6242A30D40049D203 /* Assets.xcassets in Resources */,
+				5849F201244A81300037D069 /* SLToolBar.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,8 +194,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5849F1FF244A81210037D069 /* SLToolBar.m in Sources */,
 				845B12532428B8190049D203 /* SLTableViewCell.swift in Sources */,
 				845B12CC242B8A370049D203 /* UIViewControllerExtension.swift in Sources */,
+				58049E61244CB06B00F03E09 /* ToolBar.m in Sources */,
+				58049E5E244CB06B00F03E09 /* ToolBar2.m in Sources */,
 				845B12CA242AA5BA0049D203 /* UIViewExtension.swift in Sources */,
 				845B12D3242BE71D0049D203 /* TitleBar.swift in Sources */,
 				845B12CF242BE2C10049D203 /* SLSwittch.swift in Sources */,
